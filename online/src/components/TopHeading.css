@@ -1,0 +1,23 @@
+/* Header.css */
+.header {
+  background: linear-gradient(90deg, #4e54c8, #8f94fb); /* Colorful gradient */
+  color: white;
+  padding: 60px 20px; /* Adjust padding for better appearance */
+  text-align: center;
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 60px;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.8em; /* Responsive font size */
+  }
+}

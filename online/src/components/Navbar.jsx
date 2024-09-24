@@ -24,7 +24,15 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" color="primary">
+    <AppBar
+      position="fixed" // Set to fixed for floating effect
+      sx={{
+        background:
+          "linear-gradient(90deg, rgb(78, 84, 200), rgb(143, 148, 251))",
+        color: "white",
+        zIndex: theme.zIndex.drawer + 1, // Ensure it stays on top of other elements
+      }}
+    >
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           IQWhalesAnalytics
