@@ -1,6 +1,6 @@
 // VisionMission.js
 import React from "react";
-import "./VisionMission.css"; // Import the CSS for styling
+import "../assets/css/VisionMission.css"; // Import the CSS for styling
 
 const VisionMission = () => {
   return (

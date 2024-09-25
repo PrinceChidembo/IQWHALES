@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -25,12 +26,12 @@ const Navbar = () => {
 
   return (
     <AppBar
-      position="fixed" // Set to fixed for floating effect
+      position="fixed"
       sx={{
         background:
           "linear-gradient(90deg, rgb(78, 84, 200), rgb(143, 148, 251))",
         color: "white",
-        zIndex: theme.zIndex.drawer + 1, // Ensure it stays on top of other elements
+        zIndex: theme.zIndex.drawer + 1,
       }}
     >
       <Toolbar>
@@ -52,18 +53,46 @@ const Navbar = () => {
               open={Boolean(anchorEl)}
               onClose={handleMenuClose}
             >
-              <MenuItem onClick={handleMenuClose}>Home</MenuItem>
-              <MenuItem onClick={handleMenuClose}>About Us</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Services</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Contact</MenuItem>
+              <MenuItem onClick={handleMenuClose} component={Link} to="/">
+                Home
+              </MenuItem>
+              <MenuItem
+                onClick={handleMenuClose}
+                component={Link}
+                to="/AboutPage"
+              >
+                About Us
+              </MenuItem>
+              <MenuItem
+                onClick={handleMenuClose}
+                component={Link}
+                to="/ServicesPage"
+              >
+                Services
+              </MenuItem>
+              <MenuItem
+                onClick={handleMenuClose}
+                component={Link}
+                to="/ContactPaget"
+              >
+                Contact
+              </MenuItem>
             </Menu>
           </>
         ) : (
           <>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">About Us</Button>
-            <Button color="inherit">Services</Button>
-            <Button color="inherit">Contact</Button>
+            <Button color="inherit" component={Link} to="/">
+              Home
+            </Button>
+            <Button color="inherit" component={Link} to="/AboutPage">
+              About Us
+            </Button>
+            <Button color="inherit" component={Link} to="/ServicesPage">
+              Services
+            </Button>
+            <Button color="inherit" component={Link} to="/ContactPage">
+              Contact
+            </Button>
           </>
         )}
       </Toolbar>

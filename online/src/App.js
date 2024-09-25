@@ -1,23 +1,20 @@
 import "./App.css";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Services from "./components/Services";
-import VisionMission from "./components/VisionMission";
-import TopHeading from "./components/TopHeading";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import ServicesPage from "./pages/ServicesPage";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <div style={{ marginTop: "64px" }}>
-        {" "}
-        {/* Adjust this based on your AppBar height */}
-        <TopHeading />
-        <Services />
-        <VisionMission />
-        <Footer />
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/AboutPage" element={<AboutPage />} />
+        <Route path="/ContactPage" element={<ContactPage />} />
+        <Route path="/ServicesPage" element={<ServicesPage />} />
+      </Routes>
+    </Router>
   );
 }
 

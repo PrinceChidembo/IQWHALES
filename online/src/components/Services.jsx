@@ -1,9 +1,9 @@
 // Services.js
 import React from "react";
-import "./Services.css"; // Ensure this CSS file exists
-import webDevImage from "../assets/web-development.jpg";
-import companyRegImage from "../assets/company-registration.jpg";
-import dataAnalysisImage from "../assets/data-analysis.jpg";
+import "../assets/css/Services.css"; // Ensure this CSS file exists
+import webDevImage from "../assets/images/web-development.jpg";
+import companyRegImage from "../assets/images/company-registration.jpg";
+import dataAnalysisImage from "../assets/images/data-analysis.jpg";
 
 const servicesData = [
   {

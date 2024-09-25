@@ -1,6 +1,6 @@
 // Service.js
 import React from "react";
-import "./Service.css"; // Import the CSS for styling
+import "../assets/css/Service.css"; // Import the CSS for styling
 
 const Service = ({ title, description, image }) => {
   return (

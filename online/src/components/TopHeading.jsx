@@ -1,6 +1,6 @@
 // Header.js
 import React from "react";
-import "./TopHeading.css"; // Import the CSS for styling
+import "../assets/css/TopHeading.css"; // Import the CSS for styling
 
 const TopHeading = () => {
   return (
