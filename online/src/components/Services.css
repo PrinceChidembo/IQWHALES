@@ -1,15 +1,40 @@
 /* Services.css */
 .services-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
 }
 
-.services-grid {
+.services-heading {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333; /* Change color as needed */
+}
+
+.services-button-container {
+  margin-bottom: 20px; /* Space between heading/button and cards */
+}
+
+.services-button {
+  background-color: #4e54c8; /* Button background color */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.services-button:hover {
+  background-color: #8f94fb; /* Hover effect */
+}
+
+.services-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .service-card {
@@ -18,9 +43,9 @@
   border-radius: 8px;
   padding: 20px;
   margin: 10px;
-  flex: 1 1 calc(33% - 20px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  max-width: 300px; /* Limit card width */
 }
 
 .service-card:hover {
@@ -28,7 +53,8 @@
 }
 
 .service-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px 8px 0 0;
+  width: 100%; /* Scale to fill the card */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 150px; /* Limit the maximum width */
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
 }
