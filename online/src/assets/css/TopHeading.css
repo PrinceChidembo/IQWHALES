@@ -21,3 +21,21 @@
     font-size: 1.8em; /* Responsive font size */
   }
 }
+.fade-in {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.header h1 {
+  opacity: 0;
+  animation: fade-in 0.5s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
