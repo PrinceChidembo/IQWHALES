@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import ServicesContent from "../components/ServicesContent";
 
 const ServicesPage = () => {
   return (
@@ -9,9 +10,7 @@ const ServicesPage = () => {
       <div style={{ marginTop: "64px" }}>
         {" "}
         {/* Adjust this based on your AppBar height */}
-        <div>
-          <p>Services</p>
-        </div>
+        <ServicesContent />
         <Footer />
       </div>
     </div>

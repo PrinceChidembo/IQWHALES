@@ -1,0 +1,18 @@
+/* src/IQWhales.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-image: url("../images/fish.jpg"); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  color: white; /* Text color */
+  height: 45vh;
+}
+
+.IQWhalesh2 {
+  color: white;
+  font-size: 2rem; /* Adjust font size as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional shadow for readability */
+}

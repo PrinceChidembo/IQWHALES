@@ -1,0 +1,32 @@
+.services-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.service-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  color: #333;
+}
+
+h3 {
+  margin: 10px 0;
+  color: #555;
+}
+
+p {
+  margin: 0;
+  color: #666;
+}
