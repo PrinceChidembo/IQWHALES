@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import VisionMission from "../components/VisionMission";
 import TopHeading from "../components/TopHeading";
-import Form from "../components/Form";
+import { ContactUs } from "../components/ContactUs";
 
 const HomePage = () => {
   return (
@@ -16,7 +16,7 @@ const HomePage = () => {
         <TopHeading />
         <Services />
         <VisionMission />
-        <Form />
+        <ContactUs />
         <Footer />
       </div>
     </div>
