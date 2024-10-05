@@ -1,6 +1,8 @@
 import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Form from "../components/Form";
+import EmailForm from "../components/Emailform";
 
 const ContactPage = () => {
   return (
@@ -10,7 +12,8 @@ const ContactPage = () => {
         {" "}
         {/* Adjust this based on your AppBar height */}
         <div>
-          <p>contact</p>
+          <Form />
+          <EmailForm />
         </div>
         <Footer />
       </div>
