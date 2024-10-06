@@ -14,19 +14,30 @@ const ServicesContent = () => {
   return (
     <div className="container services-container">
       <h1 className="text-center mb-4">Our Services</h1>
-
       <div className="row">
-        <div className="col-md-4">
-          <h2>Data Analysis Services</h2>
-          <p>{servicesData.dataAnalysis}</p>
+        <div className="col-md-4 mb-4">
+          <div className="card shadow">
+            <div className="card-body">
+              <h2 className="card-title">Data Analysis Services</h2>
+              <p className="card-text">{servicesData.dataAnalysis}</p>
+            </div>
+          </div>
         </div>
-        <div className="col-md-4">
-          <h2>Company Registration Services</h2>
-          <p>{servicesData.companyRegistration}</p>
+        <div className="col-md-4 mb-4">
+          <div className="card shadow">
+            <div className="card-body">
+              <h2 className="card-title">Company Registration Services</h2>
+              <p className="card-text">{servicesData.companyRegistration}</p>
+            </div>
+          </div>
         </div>
-        <div className="col-md-4">
-          <h2>Web Development Services</h2>
-          <p>{servicesData.webDevelopment}</p>
+        <div className="col-md-4 mb-4">
+          <div className="card shadow">
+            <div className="card-body">
+              <h2 className="card-title">Web Development Services</h2>
+              <p className="card-text">{servicesData.webDevelopment}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
