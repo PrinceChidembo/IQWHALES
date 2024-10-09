@@ -11,7 +11,7 @@ const TeamContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 100vh;
+  height: auto; // Changed from 100vh to auto for better responsiveness
   margin: 0;
   font-family: "Merriweather", serif;
 
@@ -34,78 +34,25 @@ const TeamContainer = styled.div`
     width: 280px;
 
     .container {
-      border-radius: 50%;
+      border-radius: 50%; // Ensure it's circular
       height: 312px;
-      position: relative;
-      transform: scale(0.48);
-      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
       width: 400px;
+      overflow: hidden; // Ensure child elements stay within the circle
+      position: relative;
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
       &:hover {
         transform: scale(0.54);
       }
 
-      &::after {
-        background-color: #f2f2f2;
-        content: "";
-        height: 10px;
+      .img {
+        width: 100%; // Full width
+        height: 100%; // Full height
+        object-fit: cover; // Maintain aspect ratio while covering the container
         position: absolute;
-        top: 390px;
-        width: 100%;
-      }
-
-      .container-inner {
-        clip-path: path(
-          "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
-        );
-        position: relative;
-        transform-origin: 50%;
-        top: -200px;
-
-        .circle {
-          background-color: #fee7d3;
-          border-radius: 50%;
-          cursor: pointer;
-          height: 380px;
-          left: 10px;
-          pointer-events: none;
-          position: absolute;
-          top: 210px;
-          width: 380px;
-        }
-
-        .img {
-          pointer-events: none;
-          position: relative;
-          transform: translateY(20px) scale(1.15);
-          transform-origin: 50% bottom;
-          transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
-
-          &:hover {
-            transform: translateY(0) scale(1.2);
-          }
-        }
-
-        .img1 {
-          left: 22px;
-          top: 164px;
-          width: 340px;
-        }
-        .img2 {
-          left: -46px;
-          top: 174px;
-          width: 444px;
-        }
-        .img3 {
-          left: -16px;
-          top: 144px;
-          width: 466px;
-        }
-        .img4 {
-          left: -26px;
-          top: 154px;
-          width: 460px;
-        }
+        top: 50%; // Center the image vertically
+        left: 50%; // Center the image horizontally
+        transform: translate(-50%, -50%); // Center the image
       }
     }
 
@@ -131,6 +78,23 @@ const TeamContainer = styled.div`
       margin-top: 4px;
     }
   }
+
+  @media (max-width: 768px) {
+    .person {
+      .container {
+        height: 200px; // Smaller height for mobile
+        width: 200px; // Smaller width for mobile
+      }
+
+      .name {
+        font-size: 24px; // Smaller name font size for mobile
+      }
+
+      .title {
+        font-size: 12px; // Smaller title font size for mobile
+      }
+    }
+  }
 `;
 
 const TeamMembers = () => {
@@ -141,41 +105,30 @@ const TeamMembers = () => {
         {
           name: "Loius Gadza",
           title: "Bachelor of Honours in Engineering (Bialystok University)",
-          imgClass: "img1",
           imgSrc: gadzaImage,
         },
         {
-          name: "Prince Chidembo ",
+          name: "Prince Chidembo",
           title:
             "Bachelor of Honours in Atuarial Science (National University of Science and Technology)",
-          imgClass: "img2",
           imgSrc: princoImage,
         },
         {
           name: "Lawarence Chatindiara",
           title:
             "Bachelor of Honours in Atuarial Science (University of Zimbabwe)",
-          imgClass: "img3",
           imgSrc: chatslawImage,
         },
         {
           name: "Ngqabuto Sibanda",
           title:
             "Bachelor of Honours in Atuarial Science (National University of Science and Technology)",
-          imgClass: "img4",
           imgSrc: ngqabutoImage,
         },
       ].map((member, index) => (
         <div className="person" key={index}>
           <div className="container">
-            <div className="container-inner">
-              <img className="circle" src="" alt="" />
-              <img
-                className={`img ${member.imgClass}`}
-                src={member.imgSrc}
-                alt={member.name}
-              />
-            </div>
+            <img className="img" src={member.imgSrc} alt={member.name} />
           </div>
           <div className="divider"></div>
           <div className="name">{member.name}</div>
