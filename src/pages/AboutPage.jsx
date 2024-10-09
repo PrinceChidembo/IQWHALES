@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import IQWhales from "../components/IQWhales";
 import AboutIQWhales from "../components/AboutIQWhales";
+import TeamMembers from "../components/ui/TeamMembers";
 
 const AboutPage = () => {
   return (
@@ -13,6 +14,7 @@ const AboutPage = () => {
         {/* Adjust this based on your AppBar height */}
         <IQWhales />
         <AboutIQWhales />
+        <TeamMembers />
         <Footer />
       </div>
     </div>
