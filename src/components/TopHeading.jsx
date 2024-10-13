@@ -25,13 +25,14 @@ const TopHeading = () => {
     }
   }, [isMobile]);
 
-  return (
-    <header className="header">
-      <h1 className={`fade-in ${isMobile ? "mobile-heading" : ""}`}>
-        {heading}
-      </h1>
-    </header>
-  );
+  const renderHeading = () => {
+    if (isMobile) {
+      return <h3 className="mobile-heading">{heading}</h3>;
+    }
+    return <h1 className="fade-in">{heading}</h1>;
+  };
+
+  return <header className="header">{renderHeading()}</header>;
 };
 
 export default TopHeading;

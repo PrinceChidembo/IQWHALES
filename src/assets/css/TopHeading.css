@@ -33,13 +33,12 @@
 @media (max-width: 768px) {
   .header {
     margin: 30px 15px; /* Reduced margin for mobile */
-  }
-
-  .header h1 {
-    font-size: 1.8em; /* Responsive font size */
+    padding: 30px 10px; /* Reduced padding for mobile */
   }
 
   .mobile-heading {
+    font-size: 1.8em; /* Responsive font size */
+    margin: 0;
     animation: none;
     opacity: 1;
   }
