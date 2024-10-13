@@ -10,6 +10,10 @@ import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Box from "@mui/material/Box";
+
+// Assume the logo is imported like this:
+import logo from "../assets/images/logo.png"; // Update this path
 
 const Navbar = () => {
   const theme = useTheme();
@@ -35,9 +39,16 @@ const Navbar = () => {
       }}
     >
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          IQWhalesAnalytics
-        </Typography>
+        <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
+          <img
+            src={logo}
+            alt="IQWhalesAnalytics Logo"
+            style={{ height: "40px", marginRight: "10px" }}
+          />
+          <Typography variant="h6" component="div">
+            IQWhalesAnalytics
+          </Typography>
+        </Box>
         {isMobile ? (
           <>
             <IconButton
@@ -73,7 +84,7 @@ const Navbar = () => {
               <MenuItem
                 onClick={handleMenuClose}
                 component={Link}
-                to="/ContactPaget"
+                to="/ContactPage"
               >
                 Contact
               </MenuItem>
