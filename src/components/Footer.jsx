@@ -1,5 +1,5 @@
-// Footer.js
 import React from "react";
+import { Link } from "react-router-dom";
 import "../assets/css/Footer.css"; // Import the CSS for styling
 
 const Footer = () => {
@@ -10,13 +10,13 @@ const Footer = () => {
           <h4>About Us</h4>
           <ul>
             <li>
-              <a href="/about">Our Story</a>
+              <Link to="/about">Our Story</Link>
             </li>
             <li>
-              <a href="/team">Team</a>
+              <Link to="/team">Team</Link>
             </li>
             <li>
-              <a href="/careers">Careers</a>
+              <Link to="/careers">Careers</Link>
             </li>
           </ul>
         </div>
@@ -24,13 +24,13 @@ const Footer = () => {
           <h4>Services</h4>
           <ul>
             <li>
-              <a href="/analytics">Data Analysis</a>
+              <Link to="/ServicesPage">Data Analysis</Link>
             </li>
             <li>
-              <a href="/consulting">Company Registration</a>
+              <Link to="/consulting">Company Registration</Link>
             </li>
             <li>
-              <a href="/solutions">Web Development</a>
+              <Link to="/solutions">Web Development</Link>
             </li>
           </ul>
         </div>
@@ -45,6 +45,7 @@ const Footer = () => {
             href="https://www.facebook.com/IQwhales"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Facebook"
           >
             <i className="fa fa-facebook"></i>
           </a>
@@ -52,6 +53,7 @@ const Footer = () => {
             href="https://www.twitter.com/IQwhales"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Twitter"
           >
             <i className="fa fa-twitter"></i>
           </a>
@@ -59,6 +61,7 @@ const Footer = () => {
             href="https://www.linkedin.com/company/iqwhales"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
           >
             <i className="fa fa-linkedin"></i>
           </a>

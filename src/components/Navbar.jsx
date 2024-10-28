@@ -10,8 +10,6 @@ import { useMediaQuery } from "@mui/material";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Box from "@mui/material/Box";
-
-// Assume the logo is imported like this:
 import logo from "../assets/images/logo.png"; // Update this path
 
 const Navbar = () => {
@@ -39,11 +37,13 @@ const Navbar = () => {
     >
       <Toolbar>
         <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
-          <img
-            src={logo}
-            alt="IQWhalesAnalytics Logo"
-            style={{ height: "40px", marginRight: "10px" }}
-          />
+          <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+            <img
+              src={logo}
+              alt="IQWhalesAnalytics Logo"
+              style={{ height: "40px", marginRight: "10px" }}
+            />
+          </Link>
         </Box>
         {isMobile ? (
           <>

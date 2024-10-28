@@ -1,5 +1,5 @@
-// Services.js
 import React from "react";
+import { Link } from "react-router-dom";
 import "../assets/css/Services.css"; // Ensure this CSS file exists
 import webDevImage from "../assets/images/web-development.jpg";
 import companyRegImage from "../assets/images/company-registration.jpg";
@@ -28,7 +28,9 @@ const Services = () => {
     <div className="services-container">
       <h2 className="services-heading">What We Offer</h2>
       <div className="services-button-container">
-        <button className="services-button">Explore Our Services</button>
+        <Link to="/ServicesPage">
+          <button className="services-button">Explore Our Services</button>
+        </Link>
       </div>
       <div className="services-cards">
         {servicesData.map((service, index) => (
